@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Projects 🚀</h2>
+<p class="mb-3">
+    A few projects that combine my skills in data analytics, automation, and software development:
+</p>
+
+<div class="row g-3">
+    {% for p in projects %}
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">{{ p.title }}</h5>
+                <p class="card-text">{{ p.desc }}</p>
+                {% if p.tags %}
+                  <div>
+                    {% for t in p.tags %}
+                      <span class="badge bg-primary me-1 mb-1">{{ t }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+            </div>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}
