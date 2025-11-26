@@ -33,6 +33,3 @@ It includes a full CRUD blogging system, static portfolio pages, and a simple co
 - HTML / CSS / Bootstrap (optional depending on your templates)
 
 ---
-
-## 📁 Project Structure
-
